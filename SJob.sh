@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -J Measuring
+#SBATCH -J MeasuringEnergyperFLOP
 #SBATCH -o ./%x.%j.%N.out
 #SBATCH -D ./build
 #SBATCH --get-user-env
@@ -8,6 +8,6 @@
 #SBATCH --export=NONE
 #SBATCH --mail-user=jannik.hoog@gmx.de
 #SBATCH --mail-type=end
-#SBATCH --time=00:20:00
+#SBATCH --time=01:00:00
 
-examples/md-flexible/md-flexible --yaml-filename examples/md-flexible/fallingDrop.yaml
+examples/md-flexible/md-flexible --yaml-filename examples/md-flexible/SpinodalDecomposition_equilibration.yaml
