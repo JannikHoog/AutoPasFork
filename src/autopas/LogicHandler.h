@@ -1101,8 +1101,8 @@ IterationMeasurements LogicHandler<Particle>::computeInteractions(Functor &funct
           energyMeasurementsPossible ? energyPkg : nanD,
           energyMeasurementsPossible ? energyRam : nanD,
           energyMeasurementsPossible ? energyTotal : nanL,
-          energyMeasurementsPossible ? numFLOP : nanL,
-          energyMeasurementsPossible ? energyPerFLOP : nanL,
+          energyMeasurementsPossible ? static_cast<long>(numFLOP) : nanL,
+          energyMeasurementsPossible ? static_cast<long>(energyPerFLOP) : nanL,
           energyMeasurementsPossible ? energyDelayProduct : nanL};
 }
 
